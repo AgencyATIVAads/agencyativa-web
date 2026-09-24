@@ -63,7 +63,7 @@ nav a:hover {
 ========================= */
 
 #inicio {
-    min-height: 560px;
+    min-height: 550px;
     padding: 55px 7%;
     display: flex;
     justify-content: center;
@@ -80,6 +80,11 @@ nav a:hover {
     grid-template-columns: 1fr 1fr;
     align-items: center;
     gap: 60px;
+}
+
+.hero-boton {
+    grid-column: 1;
+    margin-top: -85px;
 }
 
 .hero-texto {
@@ -168,7 +173,7 @@ nav a:hover {
 .hero-foto img {
     position: absolute;
 
-    width: 430px;
+    width: 380px;
     height: auto;
 
     left: 70px;
@@ -201,8 +206,8 @@ clip-path: path("M0 0 H430 V500 C390 500 360 510 325 520 C285 532 245 536 205 52
 .hero-nombre {
     position: absolute;
 
-    right: -20px;
-    top: 125px;
+    right: 10px;
+    top: 145px;
 
     margin: 0;
 
@@ -221,11 +226,11 @@ clip-path: path("M0 0 H430 V500 C390 500 360 510 325 520 C285 532 245 536 205 52
 button, .hero-boton, .boton-hablemos {
     width: fit-content;
     border: none;
-    padding: 16px 30px;
+    padding: 15px 34px;
     border-radius: 40px;
     background: linear-gradient(90deg, #e879d7, #8d8cf5, #55d8ed);
     color: white;
-    font-size: 15px;
+    font-size: 16px;
     font-weight: bold;
     cursor: pointer;
     box-shadow: 0 10px 25px rgba(120, 100, 220, 0.25);
@@ -293,6 +298,7 @@ section h2 {
 
 #sobre-mi {
     background: linear-gradient(135deg, #faf3ff, #eef9ff);
+    padding-top: 55px;
 }
 
 #sobre-mi p {
@@ -302,30 +308,42 @@ section h2 {
 }
 
 /* =========================
-   PORTFOLIO
-========================= */
-
-#portfolio {
-    background: white;
-}
-
-#portfolio p {
-    color: #6b6b80;
-}
-
-/* =========================
    CONTACTO
 ========================= */
 
 #contacto {
     text-align: center;
     background: linear-gradient(135deg, #f4e7ff, #e5f8ff);
+    padding-top: 35px;
 }
 
 #contacto p {
     color: #62627a;
     margin-bottom: 25px;
 }
+
+.contacto-rapido {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    gap: 22px;
+}
+
+.contacto-rapido img {
+    width: 58px;
+    height: 58px;
+    object-fit: contain;
+    display: block;
+}
+
+.contacto-rapido img {
+    transition: transform 0.25s ease;
+}
+
+.contacto-rapido a:hover img {
+    transform: scale(1.08);
+}
+
 
 /* =========================
    RESPONSIVE - MÓVIL
@@ -339,20 +357,61 @@ section h2 {
         padding: 20px;
     }
 
-    nav {
-        gap: 15px;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
+ nav {
+    gap: 8px 14px;
+    flex-wrap: wrap;
+    justify-content: center;
+    font-size: 14px;
+}
+
 
     #inicio {
         min-height: 550px;
-        padding: 70px 25px;
+        padding: 70px 25px 35px;
     }
 
-    #inicio h2 {
-        font-size: 50px;
-    }
+   #inicio h2 {
+    font-size: 38px;
+    width: calc(100% + 30px);
+    max-width: none;
+    margin-left: -15px;
+    margin-right: -15px;
+    margin-bottom: 20px;
+    text-align: center;
+    line-height: 1.08;
+}
+
+#inicio .hero-contenido {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+    .hero-nombre {
+    right: auto;
+    top: 280px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 22px;
+}
+
+    .hero-foto {
+    width: 100%;
+    height: 300px;
+    margin-top: -70px;
+}
+
+.hero-foto img {
+    width: 240px;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 35px;
+}
+
+.hero-boton {
+    margin-top: -5px;
+    order: 4;
+}
 
     section {
         padding: 65px 25px;
@@ -361,13 +420,48 @@ section h2 {
     section h2 {
         font-size: 38px;
     }
+
+/* QUIENES SOMOS - MOVIL */
+
+#sobre-mi {
+    padding: 35px 25px;
+}
+
+#sobre-mi .quienes-bloque {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 15px 0;
+}
+
+#sobre-mi .quienes-texto {
+    width: 100%;
+}
+
+#sobre-mi .quienes-imagen {
+    width: 75%;
+    margin: 10px 0;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#sobre-mi .quienes-imagen img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+#sobre-mi .quienes-analizamos {
+    margin: 25px 0;
+}
+
 }
 /* =========================
    SERVICIOS - TARJETAS
 ========================= */
 
 #servicios {
-    padding: 90px 7%;
+    padding: 35px 7% 70px;
 }
 
 .servicios-contenido {
@@ -420,8 +514,8 @@ section h2 {
 .servicio-card {
     background: #ffffff;
     border-radius: 18px;
-    padding: 20px 16px;
-    min-height: 210px;
+    padding: 14px 16px;
+    min-height: 100px;
     box-shadow: 0 8px 22px rgba(80, 60, 120, 0.08);
 }
 
@@ -551,8 +645,9 @@ section h2 {
     font-size: 44px;
     font-family: Georgia, serif;
     color: #1f2140;
-    font-weight: 500;
+    font-weight: 400;
     margin-bottom: 25px;
+    transform: translateY(-20px);
 }
 
 .titulo-servicios span {
@@ -619,6 +714,7 @@ background-clip: text;
     display: flex;
     align-items: flex-start;
     gap: 70px;
+    transform: translateY(-25px);
 }
 
 .quienes-texto {
@@ -627,6 +723,7 @@ background-clip: text;
 
 .quienes-imagen {
     flex: 1;
+    transform: translateY(15px);
 }
 
 .quienes-etiqueta {
@@ -721,7 +818,7 @@ background-clip: text;
 
 .quienes-bloque-2 {
     max-width: 1280px;
-    margin: -140px auto 0;
+    margin: auto 0;
     padding: 25px 6%;
     display: flex;
     align-items: flex-start;
@@ -730,7 +827,7 @@ background-clip: text;
 
 .quienes-bloque-2 .quienes-imagen {
     width: 48%;
-    transform: translateY(25px);
+    transform: translateY(-20px);
 }
 
 .quienes-bloque-2 .quienes-texto {
@@ -751,8 +848,9 @@ background-clip: text;
 box-sizing: border-box;
 margin-left: auto;
 margin-right: auto;
-    margin-top: 28px;
+    margin-top: 10px;
     padding: 18px 22px;
+    text-align: center;
     border-radius: 22px;
     background: linear-gradient(
         90deg,
@@ -802,7 +900,8 @@ margin-right: auto;
 #sobre-mi > .quienes-analizamos {
     width: 88%;
     max-width: none;
-    margin: 5px auto 0;
+    margin: 18px auto 0;
+    transform: translateY(-30px);
 }
 
 #sobre-mi .quienes-texto,
@@ -830,18 +929,19 @@ margin-right: auto;
     min-height: 100vh;
     font-family: Arial, sans-serif;
     color: #1f2140;
-    background: linear-gradient(135deg, #faf3ff, #eef9ff);
+    background: #0f1733;
 }
 
 .contacto-pagina {
     min-height: 100vh;
-    padding: 50px 7% 80px;
+    padding: 25px 7% 80px;
     box-sizing: border-box;
 }
 
 .contacto-volver {
     display: inline-block;
-    margin-bottom: 45px;
+    margin-left: 18%;
+    margin-bottom: 5px;
     padding: 12px 22px;
     border-radius: 40px;
     background: linear-gradient(90deg, #e879d7, #8d8cf5, #55d8ed);
@@ -863,7 +963,7 @@ margin-right: auto;
     max-width: 760px;
     margin: 0 auto;
     padding: 50px;
-    background: rgba(255, 255, 255, 0.72);
+    background: rgba(255, 255, 255, 0.96);
     border-radius: 30px;
     box-shadow: 0 20px 60px rgba(100, 80, 180, 0.12);
 }
@@ -887,7 +987,7 @@ margin-right: auto;
 
 .contacto-intro {
     max-width: 600px;
-    margin: 0 auto 40px;
+    margin: 0 auto 20px;
     text-align: center;
     font-size: 17px;
     line-height: 1.6;
@@ -941,7 +1041,7 @@ margin-right: auto;
 @media (max-width: 600px) {
 
     .contacto-pagina {
-        padding: 25px 18px 50px;
+        padding: 18px 14px 40px;
     }
 
     .contacto-volver {
@@ -957,7 +1057,7 @@ margin-right: auto;
     }
 
     .contacto-contenedor h1 {
-        font-size: 34px;
+        font-size: 30px;
         line-height: 1.15;
     }
 
@@ -987,7 +1087,7 @@ margin-right: auto;
     min-height: 100vh;
     font-family: Arial, sans-serif;
     color: #1f2140;
-    background: linear-gradient(135deg, #faf3ff, #eef9ff);
+    background: #0f1733;
 }
 
 .gracias-pagina {
@@ -1001,24 +1101,24 @@ margin-right: auto;
 
 .gracias-contenedor {
     width: 90%;
-    max-width: 760px;
-    padding: 60px 50px;
+    max-width: 900px;
+    padding: 45px 50px;
     text-align: center;
-    background: rgba(255, 255, 255, 0.72);
+    background: rgba(255, 255, 255, 0.96);
     border-radius: 30px;
     box-shadow: 0 20px 60px rgba(100, 80, 180, 0.12);
 }
 
 .gracias-icono {
     font-size: 38px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     color: #8d8cf5;
 }
 
 .gracias-contenedor h1 {
     margin: 0 0 20px;
     font-family: Georgia, serif;
-    font-size: 46px;
+    font-size: 40px;
     font-weight: 500;
     color: #1f2140;
 }
@@ -1056,12 +1156,12 @@ margin-right: auto;
 
     .gracias-contenedor {
         width: 100%;
-        padding: 40px 22px;
+        padding: 30px 22px;
         border-radius: 22px;
     }
 
     .gracias-contenedor h1 {
-        font-size: 34px;
+        font-size: 30px;
         line-height: 1.15;
     }
 
@@ -1074,7 +1174,8 @@ margin-right: auto;
     }
 
     .gracias-contenedor .boton-hablemos {
-        width: 100%;
+        width: auto;
+        padding: 14px 28px;
         box-sizing: border-box;
         text-align: center;
     }
@@ -1119,4 +1220,499 @@ margin-right: auto;
 
 .menu-servicios:hover .submenu-servicios {
     display: block !important;
+}
+
+/* =========================
+   ASÍ TRABAJAMOS EN ATIVA
+========================= */
+
+#como-trabajamos {
+    padding: 30px 6% 80px;
+    background: linear-gradient(135deg, #faf7ff, #eef9ff);
+}
+
+.titulo-metodo {
+    text-align: center;
+    font-family: Georgia, serif;
+    font-size: 44px;
+    font-weight: 500;
+    color: #1f2140;
+    margin-bottom: 12px;
+    transform: translateY(-20px);
+}
+
+.titulo-metodo::after {
+    content: "";
+    display: block;
+    width: 100px;
+    height: 4px;
+    margin: 10px auto 0;
+    border-radius: 10px;
+    background: linear-gradient(90deg, #c77dff, #6c63ff);
+}
+
+.titulo-metodo span {
+    font-style: italic;
+    background: linear-gradient(90deg, #e879d7, #8d8cf5, #55d8ed);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.subtitulo-metodo {
+    text-align: center;
+    font-size: 18px;
+    color: #62627a;
+    margin-bottom: 45px;
+}
+
+.metodo-grid {
+    max-width: 1180px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+    transform: translateY(-10px);
+}
+
+.metodo-card {
+    background: rgba(255,255,255,0.82);
+    border: 1px solid rgba(141, 140, 245, 0.18);
+    border-radius: 24px;
+    padding: 22px 28px;
+    box-shadow: 0 12px 35px rgba(31, 33, 64, 0.07);
+
+    display: grid;
+grid-template-columns: auto 1fr;
+column-gap: 18px;
+align-items: center;
+}
+
+.metodo-numero {
+    display: inline-block;
+    font-family: Georgia, serif;
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 12px;
+    grid-column: 1;
+    margin-bottom: 0;
+    background: linear-gradient(90deg, #e879d7, #8d8cf5, #55d8ed);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.metodo-card h3 {
+    font-size: 24px;
+    color: #1f2140;
+    grid-column: 2;
+    margin-bottom: 0;
+}
+
+.metodo-card p {
+    font-size: 17px;
+    line-height: 1.6;
+    color: #62627a;
+    grid-column: 1 / -1;
+    margin-top: 8px;
+}
+
+.metodo-cta {
+    max-width: 1180px;
+    margin: 14px auto 0;
+    text-align: center;
+    padding: 20px;
+    border-radius: 24px;
+    background: linear-gradient(
+        90deg,
+        rgba(232,121,215,0.18),
+        rgba(141,140,245,0.18),
+        rgba(85,216,237,0.18)
+    );
+}
+
+.metodo-cta h3 {
+    font-size: 24px;
+    color: #1f2140;
+    margin-bottom: 12px;
+}
+
+.metodo-cta a {
+    display: inline-block;
+    padding: 12px 28px;
+    border-radius: 999px;
+    text-decoration: none;
+    font-weight: 700;
+    color: white;
+    background: linear-gradient(90deg, #e879d7, #8d8cf5, #55d8ed);
+}
+
+@media (max-width: 900px) {
+    .metodo-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .titulo-metodo {
+        font-size: 34px;
+    }
+}
+
+/* =========================
+   RESULTADOS
+========================= */
+
+#resultados {
+    background: #0f1733;
+    padding: 70px 7%;
+    color: white;
+}
+
+.titulo-resultados {
+    text-align: center;
+    font-family: Georgia, serif;
+    font-size: 44px;
+    font-weight: 400;
+    color: white;
+    margin-bottom: 35px;
+}
+
+.titulo-resultados span {
+    background: linear-gradient(
+        90deg,
+        #e879d7,
+        #8d8cf5,
+        #55d8ed
+    );
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.resultados-grid {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    text-align: center;
+}
+
+.resultado-numero {
+    font-family: Georgia, serif;
+    font-size: 64px;
+    font-weight: 700;
+    line-height: 1;
+    margin-bottom: 18px;
+
+    background: linear-gradient(
+        90deg,
+        #e879d7,
+        #8d8cf5,
+        #55d8ed
+    );
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* SERVICIOS MÓVIL - TARJETAS COMPACTAS */
+@media (max-width: 600px) {
+
+    .servicio-card {
+        display: grid;
+        grid-template-columns: 46px 1fr;
+        column-gap: 12px;
+        row-gap: 2px;
+        align-items: center;
+        padding: 10px 16px;
+        min-height: 0;
+    }
+
+    .servicio-icono {
+        grid-column: 1;
+        grid-row: 1;
+        width: 46px;
+        height: 46px;
+        margin-bottom: 0;
+    }
+
+    .servicio-card h3 {
+        grid-column: 2;
+        grid-row: 1;
+        margin: 0;
+    }
+
+    .servicio-card p {
+        grid-column: 1 / -1;
+        grid-row: 2;
+        margin: 4px 0 0;
+    }
+}
+
+/* ASÍ TRABAJAMOS - MÓVIL COMPACTO */
+@media (max-width: 600px) {
+
+    .metodo-grid {
+        gap: 12px;
+    }
+
+    .metodo-card {
+        padding: 14px 16px;
+        grid-template-columns: 46px 1fr;
+        column-gap: 12px;
+    }
+
+    .metodo-numero {
+        font-size: 30px;
+        margin-bottom: 0;
+    }
+
+    .metodo-card h3 {
+        font-size: 21px;
+        margin-bottom: 0;
+    }
+
+    .metodo-card p {
+        font-size: 15px;
+        line-height: 1.45;
+        margin-top: 5px;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .metodo-cta {
+        padding: 14px 16px;
+        margin-top: 12px;
+        border-radius: 20px;
+    }
+
+    .metodo-cta h3 {
+        font-size: 21px;
+        line-height: 1.3;
+        margin-bottom: 12px;
+    }
+
+    .metodo-cta a {
+        padding: 10px 24px;
+        font-size: 15px;
+    }
+}
+
+#como-trabajamos {
+    padding-bottom: 35px;
+}
+
+/* RESULTADOS MÓVIL - MÁS COMPACTOS */
+@media (max-width: 600px) {
+
+  .resultados-grid {
+    gap: 12px;
+  }
+
+  .resultado-numero {
+    font-size: 46px;
+    margin-bottom: 10px;
+  }
+}
+
+/* CONTACTO MÓVIL - MÁS COMPACTO */
+@media (max-width: 600px) {
+    #contacto {
+        padding: 35px 6%;
+    }
+
+    #contacto h2 {
+        font-size: 32px;
+        line-height: 1.2;
+        margin-bottom: 24px;
+    }
+
+    #contacto .boton-hablemos {
+        padding: 10px 24px;
+        font-size: 15px;
+    }
+
+    #contacto .contacto-rapido {
+        margin-top: 24px;
+        gap: 14px;
+    }
+}
+
+/* =========================
+   FOOTER LEGAL
+========================= */
+
+.footer-legal {
+    background: #0f1733;
+    color: white;
+    text-align: center;
+    padding: 28px 20px;
+    font-family: Arial, sans-serif;
+}
+
+.footer-legal p {
+    margin: 0 0 12px;
+    font-size: 14px;
+}
+
+.footer-legal-enlaces {
+    display: flex;
+    justify-content: center;
+    gap: 22px;
+    flex-wrap: wrap;
+}
+
+.footer-legal-enlaces a {
+    color: white;
+    text-decoration: none;
+    font-size: 13px;
+}
+
+.footer-legal-enlaces a:hover {
+    text-decoration: underline;
+}
+
+/* =========================
+   PÁGINAS LEGALES
+========================= */
+
+.pagina-legal {
+    margin: 0;
+    min-height: 100vh;
+    background: #0f1733;
+    font-family: Arial, sans-serif;
+    color: #1f2140;
+}
+
+.legal-pagina {
+    min-height: 100vh;
+    padding: 60px 7%;
+    box-sizing: border-box;
+}
+
+.legal-contenedor {
+    width: 90%;
+    max-width: 900px;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.96);
+    border-radius: 30px;
+    padding: 50px 60px 25px;
+    box-sizing: border-box;
+}
+
+.legal-volver {
+    display: inline-block;
+    margin-bottom: 30px;
+    color: #8d8cf5;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.legal-contenedor h1 {
+    font-family: Georgia, serif;
+    font-size: 48px;
+    margin: 0 0 35px;
+    color: #1f2140;
+}
+
+.legal-contenedor h2 {
+    font-size: 20px;
+    margin: 30px 0 10px;
+    color: #1f2140;
+}
+
+.legal-contenedor p {
+    font-size: 16px;
+    line-height: 1.7;
+    margin: 0 0 18px;
+}
+
+/* PÁGINAS LEGALES - MÓVIL */
+@media (max-width: 600px) {
+    .legal-pagina {
+        padding: 25px 5%;
+    }
+
+    .legal-contenedor {
+        width: 100%;
+        padding: 30px 22px;
+        border-radius: 20px;
+    }
+
+    .legal-contenedor h1 {
+        font-size: 30px;
+    }
+
+    .legal-contenedor h2 {
+        font-size: 18px;
+    }
+
+    .legal-contenedor p {
+        font-size: 15px;
+    }
+}
+
+/* BOTÓN VOLVER - PÁGINAS LEGALES */
+
+.legal-volver {
+    display: inline-block;
+    padding: 10px 22px;
+    border-radius: 999px;
+    background: linear-gradient(90deg, #ec5ac8, #a56de2, #55cfe3);
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+    transition: transform 0.2s ease;
+}
+
+.legal-volver:hover {
+    transform: translateY(-2px);
+}
+
+/* TÍTULO PÁGINAS LEGALES - ESTILO ATIVA */
+
+.legal-contenedor h1 {
+    font-family: Georgia, serif;
+    font-size: 52px;
+    font-weight: 600;
+    line-height: 1.1;
+    margin: 5px 0 35px;
+    color: #1f2140;
+    text-align: center;
+}
+
+.legal-contenedor h1 span {
+    font-style: italic;
+    display: inline-block;
+    background: linear-gradient(90deg, #ec5ac8, #a56de2, #55cfe3);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+}
+
+/* TÍTULOS DE LOS APARTADOS LEGALES */
+.legal-contenedor h2 {
+    font-size: 20px;
+    font-weight: 700;
+    color: #1f2140;
+    margin-top: 28px;
+    margin-bottom: 10px;
+    padding-bottom: 4px;
+    display: table;
+    position: relative;
+}
+
+.legal-contenedor h2::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 2px;
+    margin-top: 1px;
+    border-radius: 10px;
+    background: linear-gradient(90deg, #ec5ac8, #a56de2, #55cfe3);
 }
