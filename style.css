@@ -1719,22 +1719,30 @@ align-items: center;
 
 /* CASILLA POLÍTICA DE PRIVACIDAD */
 .aceptar-privacidad {
-    display: flex;
-    align-items: center;
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
     gap: 10px;
-    margin: 12px 0 18px;
+    margin: 14px 0 20px;
     font-size: 14px;
 }
 
 .aceptar-privacidad input[type="checkbox"] {
-    width: 18px;
-    height: 18px;
+    width: 18px !important;
+    height: 18px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    flex: 0 0 18px;
+}
+
+.aceptar-privacidad span {
+    display: inline !important;
     margin: 0;
-    flex-shrink: 0;
 }
 
 .aceptar-privacidad a {
-    color: #a56de2;
+    color: #a56de2 !important;
     font-weight: 600;
     text-decoration: underline;
 }
