@@ -1716,3 +1716,25 @@ align-items: center;
     border-radius: 10px;
     background: linear-gradient(90deg, #ec5ac8, #a56de2, #55cfe3);
 }
+
+/* CASILLA POLÍTICA DE PRIVACIDAD */
+.aceptar-privacidad {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 12px 0 18px;
+    font-size: 14px;
+}
+
+.aceptar-privacidad input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    margin: 0;
+    flex-shrink: 0;
+}
+
+.aceptar-privacidad a {
+    color: #a56de2;
+    font-weight: 600;
+    text-decoration: underline;
+}
