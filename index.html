@@ -341,5 +341,43 @@ observer.observe(document.querySelector('#resultados'));
     </div>
 </footer>
 
+<!-- AVISO DE COOKIES -->
+<div id="cookie-banner" class="cookie-banner">
+    <div class="cookie-contenido">
+        <p>
+            Utilizamos cookies para mejorar tu experiencia en nuestra web.
+            Puedes aceptar o rechazar las cookies no necesarias.
+            <a href="politica-cookies.html">Política de cookies</a>
+        </p>
+
+        <div class="cookie-botones">
+            <button id="rechazar-cookies" type="button">Rechazar</button>
+            <button id="aceptar-cookies" type="button">Aceptar</button>
+        </div>
+    </div>
+</div>
+
+<script>
+    const cookieBanner = document.getElementById("cookie-banner");
+    const aceptarCookies = document.getElementById("aceptar-cookies");
+    const rechazarCookies = document.getElementById("rechazar-cookies");
+
+    const decisionCookies = localStorage.getItem("cookiesAgencyAtiva");
+
+    if (decisionCookies) {
+        cookieBanner.style.display = "none";
+    }
+
+    aceptarCookies.addEventListener("click", function () {
+        localStorage.setItem("cookiesAgencyAtiva", "aceptadas");
+        cookieBanner.style.display = "none";
+    });
+
+    rechazarCookies.addEventListener("click", function () {
+        localStorage.setItem("cookiesAgencyAtiva", "rechazadas");
+        cookieBanner.style.display = "none";
+    });
+</script>
+
 </body>
 </html>
