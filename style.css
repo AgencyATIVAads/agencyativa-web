@@ -1763,6 +1763,7 @@ align-items: center;
     border-radius: 24px;
     box-shadow: 0 12px 45px rgba(0, 0, 0, 0.25);
     padding: 40px;
+    display: block !important;
 }
 
 .cookie-contenido {
@@ -1817,23 +1818,45 @@ align-items: center;
 @media (max-width: 768px) {
 
     .cookie-banner {
-        left: 12px;
-        right: 12px;
-        bottom: 12px;
+        position: fixed;
+        left: 50%;
+        right: auto;
+        bottom: 20px;
+        transform: translateX(-50%);
+        width: calc(100% - 30px);
+        max-width: 420px;
+        height: auto !important;
+        min-height: 0 !important;
+        max-height: none !important;
         padding: 18px;
+        box-sizing: border-box;
+        border-radius: 22px;
     }
 
     .cookie-contenido {
         flex-direction: column;
         align-items: stretch;
         gap: 15px;
+        height: auto !important;
+        min-height: 0 !important;
+        padding-bottom: 0 !important;
+    }
+
+    .cookie-texto {
+        width: 100%;
+        font-size: 14px;
+        line-height: 1.5;
     }
 
     .cookie-botones {
         width: 100%;
+        display: flex;
+        gap: 10px;
     }
 
     .cookie-botones button {
         flex: 1;
+        padding: 12px 8px;
+        font-size: 14px;
     }
 }
