@@ -362,9 +362,7 @@ observer.observe(document.querySelector('#resultados'));
     const aceptarCookies = document.getElementById("aceptar-cookies");
     const rechazarCookies = document.getElementById("rechazar-cookies");
 
-    const decisionCookies = null;
-
-    if (decisionCookies) {
+    if (localStorage.getItem("cookiesAgencyAtiva")) {
         cookieBanner.style.display = "none";
     }
 
@@ -378,6 +376,7 @@ observer.observe(document.querySelector('#resultados'));
         cookieBanner.style.display = "none";
     });
 </script>
+
 
 </body>
 </html>

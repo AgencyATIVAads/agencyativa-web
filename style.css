@@ -1763,7 +1763,6 @@ align-items: center;
     border-radius: 24px;
     box-shadow: 0 12px 45px rgba(0, 0, 0, 0.25);
     padding: 40px;
-    display: block !important;
 }
 
 .cookie-contenido {
